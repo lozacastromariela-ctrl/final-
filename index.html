@@ -5,138 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UNAB Proyecto de Etica</title>
 
-    <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-    <!-- TU CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<!-- ========== PANTALLA DE CARGA ========== -->
-<div id="loader-wrapper">
-    <div class="unab-logo">
-        <span class="unab-letter">U</span>
-        <span class="unab-letter">N</span>
-        <span class="unab-letter">A</span>
-        <span class="unab-letter">B</span>
+    <div id="loader-wrapper">
+        <div class="unab-logo">
+            <span class="unab-letter">U</span>
+            <span class="unab-letter">N</span>
+            <span class="unab-letter">A</span>
+            <span class="unab-letter">B</span>
+        </div>
+        <div class="loader">
+            <div class="spinner"></div>
+            <div class="leaf-icon"></div>
+        </div>
+        <p>CARGANDO...</p>
+        <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
     </div>
 
-    <div class="loader">
-        <div class="spinner"></div>
-        <div class="leaf-icon"></div>
-    </div>
+    <header class="site-header">
+        <img src="logo1.png" class="logo" alt="Logo 1" />
+        <a href="index2.html" class="header-link">INFOGRAFIA</a>
+        <img src="logo2.png" class="logo" alt="Logo 2" />
+    </header>
 
-    <p>CARGANDO...</p>
+    <section class="portada" data-aos="fade-up">
+        <img src="portada.jpg" class="portada-img" alt="Foto de portada" />
+        <div class="portada-texto">
+            <h1>Universidad Nacional De Barranca</h1>
+            <h6>"La primera universidad licenciada de la región Lima"</h6>
+        </div>
+    </section>
 
-    <div class="dots-container">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-</div>
-
-<!-- ========== TU SITIO WEB ========== -->
-
-<header class="site-header">
-    <img src="logo1.png" class="logo" />
-    <img src="logo2.png" class="logo" />
-</header>
-
-<section class="portada" data-aos="fade-up">
-    <img src="portada.jpg" class="portada-img" />
-    <div class="portada-texto">
-        <h1>Universidad Nacional De Barranca</h1>
-        <h6>"La primera universidad licenciada de la región Lima"</h6>
-    </div>
-</section>
-
-<!-- ========== DESDE AQUÍ INICIA EL WALLPAPER ========== -->
-
-<section class="servicios fondo-wall">
-    
-    <h2 data-aos="fade-up">Nuestros trabajos</h2>
-
-    <div class="servicios-contenedor">
-
-        <div class="servicio" data-aos="fade-up">
-            <div class="img-contenedor">
-                <img src="servicio1.jpg" class="img-grande">
-                <img src="servicio1-circulo.jpg" class="img-circulo">
+    <section id="slider-section">
+        <h2 data-aos="fade-up" style="font-size: 2.5rem; margin-bottom: 3rem; text-align: center; font-family: serif; color: #000;">
+            Nuestros trabajos
+        </h2>
+        <div class="slider-container" data-aos="fade-up">
+            <img id="mainImg" class="main-img" src="imagen1.jpg" alt="Imagen principal">
+            <div id="miniBox" class="mini-box">
+                <img id="miniImg" class="mini-img" src="imagen2.jpg" alt="Miniatura">
             </div>
-            <h3>Nombre — 10 €</h3>
-            <p>Añade tu estrategia de precios...</p>
-            <!-- Botón eliminado -->
-        </div>
-
-        <div class="servicio" data-aos="fade-up">
-            <div class="img-contenedor">
-                <img src="servicio2.jpg" class="img-grande">
-                <img src="servicio2-mini.jpg" class="img-floating">
+            <div id="infoBox" class="info-box">
+                <div class="qr-hover-img" id="qrHoverImg"></div>
+                <p id="qrTitle" class="qr-title">Formulario</p>
+                <img id="qrImg" class="qr" src="qr1.png" alt="QR">
+                <a id="linkEl" class="link" href="https://forms.gle/pvUViZFaPBmLX7FF6" target="_blank" rel="noopener">
+                    https://forms.gle/pvUViZFaPBmLX7FF6
+                </a>
             </div>
-            <h3>Nombre — 20 €</h3>
-            <p>Añade tu estrategia de precios...</p>
-            <!-- Botón eliminado -->
+            <div class="controls">
+                <button id="prevBtn" aria-label="Anterior">◀</button>
+                <button id="nextBtn" aria-label="Siguiente">▶</button>
+            </div>
         </div>
+    </section>
+    <div class="separador"></div>
 
-    </div>
-</section>
+    <section class="fondo-wall seccion-docente">
 
+        <h1 class="titulo" data-aos="fade-down">
+            <span class="icono">🎓</span> Docente
+        </h1>
 
-<div class="separador"></div>
+        <section class="card-docente" data-aos="fade-up">
 
-<section class="fondo-wall encargado">
-    <div class="encargado-contenedor">
-        <div class="encargado-img" data-aos="fade-right">
-            <img src="encargado.jpg" alt="Foto del encargado" />
+            <div class="foto-docente">
+                <img id="foto" src="encargado.jpg" alt="Foto del docente">
+            </div>
+
+            <div class="info-docente">
+                <span class="tag">Curso de Ética</span>
+
+                <h2 class="nombre">
+                    Dr. Epifania Huerta <br>
+                    Andres David
+                </h2>
+
+                <div class="linea"></div>
+
+                <p class="descripcion">
+                    Encargado de la Escuela de Ingeniería de Sistemas e Informática
+                </p>
+            </div>
+
+        </section>
+
+    </section>
+    <div class="separador"></div>
+
+    <section class="fondo-wall seccion-equipo">
+        <div class="logo-equipo" data-aos="fade-down">
+            <img src="https://img.icons8.com/ios-filled/100/1e3a8a/conference-call.png" alt="logo-equipo">
         </div>
-
-        <div class="encargado-texto" data-aos="fade-left">
-            <h2>Encargado del curso de ética e informática en la sociedad</h2>
-
-            <h3>Dr. Epifania Huertas Andres David</h3>
-            <p>encargado del curso en la facultad de ing. de sistemas e informática</p>
-        </div>
-    </div>
-</section>
-
-<div class="separador"></div>
-
-<section class="fondo-wall equipo" data-aos="fade-up">
-    <div class="equipo-texto">
-        <h2 style="text-align:center;">Conoce a nuestro equipo de trabajo</h2>
-        <p class="equipo-lista">
-            • Bueno Vega Lenin Antonio<br />
-            • Castillo Espinoza Dangelo Jose Jesus<br />
-            • Giraldo Hidalgo Elvis Giovani<br />
-            • Huaman Gomez Jhon Kenny<br />
-            • López Manchego Jamir Cesar<br />
-            • Pantoja Zorrilla Leonel Alexander<br />
-            • Rivera Meza José Octavio<br />
-            • Rodríguez Saavedra Gerardo Daniel<br />
-            • Villaflor Trujillo Gamaliel Nicky
+        <h1 data-aos="fade-up">Integrantes del Equipo</h1>
+        <p class="subtitulo" data-aos="fade-up" data-aos-delay="150">
+            Estudiantes comprometidos con la excelencia académica
         </p>
-    </div>
+        <div class="contenedor">
+            <div class="card-integrantes" data-aos="fade-right">
+                <h2>Lista de Integrantes</h2>
+                <div class="linea"></div>
+                <ul>
+                    <li><span class="num">1</span> Bueno Vega Lenin Antonio</li>
+                    <li><span class="num">2</span> Castillo Espinoza Dangelo Jose Jesus</li>
+                    <li><span class="num">3</span> Giraldo Hidalgo Elvis Giovani</li>
+                    <li><span class="num">4</span> Huaman Gomez Jhon Kenny</li>
+                    <li><span class="num">5</span> López Manchego Jamir Cesar</li>
+                    <li><span class="num">6</span> Pantoja Zorrilla Leonel Alexander</li>
+                    <li><span class="num">7</span> Rivera Meza José Octavio</li>
+                    <li><span class="num">8</span> Rodríguez Saavedra Gerardo Daniel</li>
+                    <li><span class="num">9</span> Villaflor Trujillo Gamaliel Nicky</li>
+                </ul>
+            </div>
+            <div class="contenedor-fotos">
+                <div class="img-box" data-aos="fade-left">
+                    <img src="equipo1.jpg" alt="Integrante 1">
+                </div>
+                <div class="img-box" data-aos="fade-left" data-aos-delay="150">
+                    <img src="equipo2.jpg" alt="Integrante 2">
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
 
-    <div class="equipo-imagenes">
-        <img src="equipo1.jpg" class="equipo-img" />
-        <img src="equipo2.jpg" class="equipo-img" />
-    </div>
-</section>
+    <footer class="footer">
+        <p>© 2025 Universidad Nacional Autónoma de Barranca — UNAB</p>
+        <p>Facultad de Ingernieria e informatica | Proyecto Digital QR</p>
+    </footer>
 
-<br />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1200, once: true });</script>
 
-<footer class="footer">
-    <p>© 2025 Universidad Nacional Autónoma de Barranca — UNAB</p>
-    <p>Facultad de Ingernieria e informatica | Proyecto Digital QR</p>
-</footer>
-
-<!-- LIBRERÍAS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ duration: 1200, once: true });</script>
-
-<!-- TU SCRIPT -->
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

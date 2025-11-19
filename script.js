@@ -1,21 +1,23 @@
 /* ============================
-   DETECTOR DE CELULAR
+   BLOQUEO PARA VISTA CELULAR
    ============================ */
 window.addEventListener('DOMContentLoaded', () => {
+    const forceScreen = document.getElementById("force-desktop-screen");
+
     const isMobile = /iphone|android|ipad|mobile/i.test(navigator.userAgent);
-    const mobileWarning = document.getElementById("mobile-warning");
-    const continueBtn = document.getElementById("continueBtn");
 
     if (isMobile) {
-        // Mostrar advertencia antes del loader
-        mobileWarning.style.display = "flex";
-        document.body.style.overflow = "hidden"; // evitar scroll
+        forceScreen.style.display = "flex";
+        document.body.style.overflow = "hidden"; // bloquear scroll
     }
 
-    continueBtn.addEventListener("click", () => {
-        mobileWarning.style.display = "none";
-        document.body.style.overflow = "auto";
-    });
+    // Detectar si el usuario activa "vista de ordenador"
+    setInterval(() => {
+        if (window.innerWidth > 900) {
+            forceScreen.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }, 700);
 });
 
 /* ============================
@@ -236,5 +238,6 @@ if (foto) {
         }, 300); // Coincide con la transición
     });
 }
+
 
 

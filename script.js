@@ -1,4 +1,24 @@
 /* ============================
+   DETECTOR DE CELULAR
+   ============================ */
+window.addEventListener('DOMContentLoaded', () => {
+    const isMobile = /iphone|android|ipad|mobile/i.test(navigator.userAgent);
+    const mobileWarning = document.getElementById("mobile-warning");
+    const continueBtn = document.getElementById("continueBtn");
+
+    if (isMobile) {
+        // Mostrar advertencia antes del loader
+        mobileWarning.style.display = "flex";
+        document.body.style.overflow = "hidden"; // evitar scroll
+    }
+
+    continueBtn.addEventListener("click", () => {
+        mobileWarning.style.display = "none";
+        document.body.style.overflow = "auto";
+    });
+});
+
+/* ============================
    SCRIPT PÁGINA PRINCIPAL (LOADER)
    ============================ */
 window.addEventListener('load', function () {
@@ -216,4 +236,5 @@ if (foto) {
         }, 300); // Coincide con la transición
     });
 }
+
 
